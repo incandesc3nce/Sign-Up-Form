@@ -49,6 +49,7 @@ h6 {
 
 :root {
   --accent-color: #bf3c61;
+  --hover-accent: #df4873;
   --form-bgcolor:  #1d2746;
   --not-form-bgcolor: #171f36;
   --left-padding: 3vw;
@@ -175,10 +176,13 @@ form > section {
   padding: 1vh 2.5vw;
 
   font-size: 2.2vh;
+
+  transition-duration: 0.2s;
 }
 
 .button:hover {
   cursor: pointer;
+  background-color: var(--hover-accent);
 }
 
 
@@ -188,9 +192,14 @@ form > section {
 }
 .link {
   color: var(--accent-color);
+  transition-duration: 0.2s;
   text-decoration: none;
 }
+.link:hover {
+  color: var(--hover-accent);
+}
 
+/* responsive media queries */
 @media only screen and (max-width: 740px) {
   body {
     flex-direction: column;
