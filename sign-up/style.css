@@ -134,15 +134,20 @@ form > section {
   font-size: 0.85rem;
 }
 .input {
-  padding: 0;
+  padding: 0 0.5vw; 
   width: max(18vw, 13rem);
   height: max(3vh, 2rem);
   color: #0f1322;
   font-weight: 550;
   font-size: 1.3rem;
-  border: 3px solid silver;
+  background-color: rgb(245, 245, 245);
+  border: 2px solid #6e6e6e;
   border-radius: 7px;
 }
+#pass, #confirm_pass {
+  font-size: 1rem;
+}
+
 
 .form-container {
   display: flex;
@@ -179,7 +184,9 @@ form > section {
 
   transition-duration: 0.2s;
 }
-
+#button {
+  background-color: var(--not-form-bgcolor);
+}
 .button:hover {
   cursor: pointer;
   background-color: var(--hover-accent);
@@ -236,6 +243,9 @@ form > section {
   div.flex.gap {
     gap: 1rem;
   }
+  .input {
+    width: 80vw;
+  }
 
   section:nth-child(2){
     background-color: var(--form-bgcolor);
@@ -266,3 +276,19 @@ form > section {
     padding: 5vh 0 5vh var(--left-padding)
   }
 }
+
+:focus {
+  outline: none;
+  border-color: rgb(132, 132, 255);
+}
+
+/* validation */
+input:invalid:focus {
+  border-color: red;
+}
+
+input:valid {
+  border: 2px solid green;
+}
+
+
