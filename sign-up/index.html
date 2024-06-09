@@ -11,35 +11,42 @@
         <h1>Essence</h1>
     </header>
     <main>
-        <section>
-            <p>This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. Sign up <em>now</em> to get started.</p>
-            <p>You <em>know</em> you want to.</p>
+        <section id="text" class="overview not-form">
+            <p class="text">This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. <br> Sign up <em>now</em> to get started.</p>
+            <br>
+            <p class="text">You <em>know</em> you want to.</p>
         </section>
 
         <section>
             <form action="" method="post">
                 <legend>Let's do this!</legend>
+                
+                <div>
+                    <label for="first_name">First name</label>
+                    <input type="text" id="first_name" name="first_name">
+                    <label for="last_name">Last name</label>
+                    <input type="text" id="last_name" name="last_name">
+                </div>
 
-                <label for="first_name">First name</label>
-                <input type="text" id="first_name" name="first_name">
-                <label for="last_name">Last name</label>
-                <input type="text" id="last_name" name="last_name">
+                <div>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email">
+                    <label for="phone">Phone number</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
 
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email">
-                <label for="phone">Phone number</label>
-                <input type="tel" id="phone" name="phone">
-
-                <label for="pass">Password</label>
-                <input type="password" id="pass" name="pass">
-                <label for="confirm_pass">Confirm password</label>
-                <input type="password" id="confirm_pass" name="confirm_pass">
+                <div>
+                    <label for="pass">Password</label>
+                    <input type="password" id="pass" name="pass">
+                    <label for="confirm_pass">Confirm password</label>
+                    <input type="password" id="confirm_pass" name="confirm_pass">
+                </div>
                 
                 <button type="submit">Create Account</button>
             </form>
         </section>
 
-        <section>
+        <section class="not-form">
             <p>Already have an account? <a href="">Log in</a></p>
         </section>
     </main>

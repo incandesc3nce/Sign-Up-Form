@@ -1,8 +1,4 @@
-@font-face {
-  font-family: "Open Sans";
-  src: url("./fonts/OpenSans/opensans-variablefont_wdthwght-webfont.woff2")
-    format("woff2");
-}
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
 @font-face {
   font-family: "Quicksand";
@@ -53,20 +49,24 @@ h6 {
 
 :root {
   --accent-color: #ff9100;
+  --header-width: 35vw;
+  --main-width: calc(100vw - var(--header-width));
+  --main-bgcolor: #171f36;
+  --not-form-bgcolor: #1d2746;
 }
 
 body {
   display: flex;
   height: 100vh;
 }
-
+/* heading styling */
 header {
   display: flex;
   height: 100vh;
   justify-content: center;
   align-items: center;
 
-  width: 35vw;
+  width: var(--header-width);
   background-image: url("./background.jpg");
   background-position: 50%;
   background-size: cover;
@@ -85,6 +85,25 @@ header h1 {
   background-color: rgba(133, 133, 133, 0.3);
 }
 
+/* main styling */
 main {
-  width: 65vw;
+  width: var(--main-width);
+  background-color: var(--main-bgcolor);
+  color: #fff;
+  font-family: "Open Sans", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+}
+
+.not-form {
+  background-color: var(--not-form-bgcolor);
+}
+
+.text {
+  font-family: "Open Sans", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 550;
+  width: min(70ch, 100%);
+}
+
+.overview {
+  padding: 10rem 3rem 3rem 2rem;
 }
