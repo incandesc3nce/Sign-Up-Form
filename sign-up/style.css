@@ -48,62 +48,143 @@ h6 {
 /* reset end */
 
 :root {
-  --accent-color: #ff9100;
-  --header-width: 35vw;
-  --main-width: calc(100vw - var(--header-width));
-  --main-bgcolor: #171f36;
-  --not-form-bgcolor: #1d2746;
+  --accent-color: #bf3c61;
+  --form-bgcolor:  #1d2746;
+  --not-form-bgcolor: #171f36;
+  --left-padding: 3vw;
 }
 
+/* general */
 body {
   display: flex;
-  height: 100vh;
 }
-/* heading styling */
-header {
+
+.flex {
   display: flex;
-  height: 100vh;
-  justify-content: center;
-  align-items: center;
-
-  width: var(--header-width);
-  background-image: url("./background.jpg");
-  background-position: 50%;
-  background-size: cover;
-}
-header h1 {
-  width: 100%;
-  color: #fff;
-
-  font-family: "Quicksand", system-ui, -apple-system, BlinkMacSystemFont,
-    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
-    sans-serif;
-  font-weight: 300;
-  font-size: 4rem;
-  text-align: center;
-
-  background-color: rgba(133, 133, 133, 0.3);
 }
 
-/* main styling */
 main {
-  width: var(--main-width);
-  background-color: var(--main-bgcolor);
-  color: #fff;
-  font-family: "Open Sans", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
-}
-
-.not-form {
   background-color: var(--not-form-bgcolor);
 }
 
 .text {
-  font-family: "Open Sans", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
-  font-size: 1.5rem;
+  font-family: "Open Sans", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: #fff;
   font-weight: 550;
-  width: min(70ch, 100%);
 }
 
-.overview {
-  padding: 10rem 3rem 3rem 2rem;
+/* header */
+.header {
+  height: 100vh;
+  width: 35vw;
+  justify-content: center;
+  align-items: center;
+}
+
+.header > h1 {
+  font-family: "Quicksand";
+  color: #fff;
+  font-size: max(2rem, 5vw);
+  text-align: center;
+
+  width: 100%;
+
+  background-color: #171f365b;
+}
+
+.header-background {
+  background-image: url("./background.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+/* main text */
+.main {
+  height: 100vh;
+  width: 65vw;
+}
+
+
+
+.main-text {
+  padding: 15vh 0 5vh var(--left-padding);
+}
+
+.main-text > p {
+  font-size: 1.5rem;
+  
+  width: min(55ch, 60vw);
+}
+
+/* form */
+
+form > section > h2 {
+  padding: 1.5vh 0 0 var(--left-padding);
+}
+
+form > section {
+  background-color: var(--form-bgcolor);
+}
+
+.label {
+  display: block;
+  letter-spacing: 0.3em;
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+.input {
+  padding: 0;
+  width: max(18vw, 13rem);
+  height: max(3vh, 2rem);
+  color: #0f1322;
+  font-weight: 550;
+  font-size: 1.3rem;
+  border: 3px solid silver;
+  border-radius: 7px;
+}
+
+.form-container {
+  display: flex;
+  justify-content: fle-start;
+  flex: 1;
+  gap: 2rem;
+}
+
+.form-padding {
+  padding: 2vh 0 3.1vw var(--left-padding);
+}
+
+.input-margin {
+  margin: 1vh 0 0.5vh 0;
+}
+
+div.flex {
+  flex-direction: column;
+}
+
+/* button */
+
+.button {
+  background-color: var(--accent-color);
+  border: 0px;
+  border-radius: 10px;
+
+  margin: 3vh 0 1vh var(--left-padding);
+  padding: 1vh 2.5vw;
+
+  font-size: 2.2vh;
+}
+
+.button:hover {
+  cursor: pointer;
+}
+
+
+/* log in link */
+.account {
+  margin: 0.5vh 0 1vh var(--left-padding);
+}
+.link {
+  color: var(--accent-color);
+  text-decoration: none;
 }
