@@ -145,9 +145,11 @@ form > section {
 
 .form-container {
   display: flex;
-  justify-content: fle-start;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
   flex: 1;
-  gap: 2rem;
+  gap: 1rem;
 }
 
 .form-padding {
@@ -158,8 +160,8 @@ form > section {
   margin: 1vh 0 0.5vh 0;
 }
 
-div.flex {
-  flex-direction: column;
+.gap {
+  gap: 2rem;
 }
 
 /* button */
@@ -187,4 +189,71 @@ div.flex {
 .link {
   color: var(--accent-color);
   text-decoration: none;
+}
+
+@media only screen and (max-width: 740px) {
+  body {
+    flex-direction: column;
+  }
+
+  .header {
+    width: 100vw;
+    height: 20vh;
+  }
+
+  .header-background {
+    background-size:130vw;
+    background-position: center;
+  }
+
+  .main {
+    width: 100vw;
+  }
+  section > h2 {
+    text-align: center;
+  }
+
+  .form-container div {
+    flex-direction: column;
+  }
+  .form-container {
+    align-items: center;
+  }
+
+  .main-text > p {
+    font-size: 5vw;
+    width: min(70ch, 90vw);
+  }
+  div.flex.gap {
+    gap: 1rem;
+  }
+
+  section:nth-child(2){
+    background-color: var(--form-bgcolor);
+    padding-bottom: 1.5rem;
+  }
+
+  #button {
+    display: flex;
+    justify-content: center;
+  }
+
+  .log-in {
+    text-align: center;
+    margin-top: 0;
+    padding: 1rem 1.5vw 3rem 1.5vw;
+    background-color: var(--not-form-bgcolor);
+  }
+}
+
+@media only screen and (max-height: 770px) {
+  .log-in {
+    pad: 1rem 1.5vw 3rem 1.5vw;
+  }
+  .main-text > p {
+    font-size: min(1.5rem, 3vh);
+  }
+  .main-text {
+    padding: 5vh 0 5vh var(--left-padding)
+  }
 }
