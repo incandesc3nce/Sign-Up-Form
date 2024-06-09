@@ -1,0 +1,16 @@
+@font-face {
+    font-family: "Open Sans";
+    src: 
+        url("./fonts/OpenSans/opensans-variablefont_wdthwght-webfont.woff2") format("woff2"),
+}
+
+@font-face {
+    font-family: "Quicksand";
+    src: 
+        url("./fonts/Quicksand/quicksand-bold-webfont.woff2") format("woff2"),
+        url("./fonts/Quicksand/quicksand-italic-webfont.woff2") format("woff2"),
+        url("./fonts/Quicksand/quicksand-regular-webfont.woff2") format("woff2"),
+        url("./fonts/Quicksand/quicksand-light-webfont.woff2") format("woff2");
+}
+
+
